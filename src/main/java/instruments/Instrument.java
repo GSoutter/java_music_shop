@@ -45,6 +45,10 @@ public abstract class Instrument {
         return material;
     }
 
+    public String getMaterialName() {
+        return material.getName();
+    }
+
     public void setMaterial(Material material) {
         this.material = material;
     }
@@ -59,6 +63,10 @@ public abstract class Instrument {
 
     public InstrumentType getType() {
         return type;
+    }
+
+    public String getTypeName() {
+        return type.getName();
     }
 
     public void setType(InstrumentType type) {
