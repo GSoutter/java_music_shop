@@ -30,8 +30,4 @@ public class Guitar extends Instrument{
     public String play() {
         return "So anyway, here's Wonderwall";
     }
-
-    public double calculateMarkup() {
-        return getSellPrice() - getBuyPrice();
-    }
 }
