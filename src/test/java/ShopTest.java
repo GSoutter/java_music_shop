@@ -63,5 +63,11 @@ public class ShopTest {
         assertEquals(0, shop.getStock().size());
     }
 
+    @Test
+    public void canAddStock(){
+        shop.addItem(horn);
+        assertEquals(1, shop.getStock().size());
+    }
+
 
 }

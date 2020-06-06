@@ -1,4 +1,5 @@
 import behaviours.ISell;
+import instruments.Horn;
 
 import java.util.ArrayList;
 
@@ -12,5 +13,10 @@ public class Shop {
 
     public ArrayList<ISell> getStock() {
         return stock;
+    }
+
+
+    public void addItem(ISell item) {
+        this.stock.add(item);
     }
 }
