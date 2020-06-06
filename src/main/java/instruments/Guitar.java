@@ -11,12 +11,11 @@ public class Guitar extends Instrument{
                   String brand,
                   Material material,
                   String colour,
-                  InstrumentType type,
                   boolean electric,
                   double buyPrice,
                   double sellPrice,
                   int numberOfStrings) {
-        super(name, brand, material, colour, type, electric, buyPrice, sellPrice);
+        super(name, brand, material, colour, InstrumentType.STRINGS, electric, buyPrice, sellPrice);
         this.numberOfStrings = numberOfStrings;
     }
 
@@ -26,5 +25,9 @@ public class Guitar extends Instrument{
 
     public void setNumberOfStrings(int numberOfStrings) {
         this.numberOfStrings = numberOfStrings;
+    }
+
+    public String play() {
+        return "So anyway, here's Wonderwall";
     }
 }

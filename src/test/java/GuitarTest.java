@@ -16,7 +16,6 @@ public class GuitarTest {
                 "fender",
                 Material.WOOD,
                 "sunburst orange",
-                InstrumentType.STRINGS,
                 true,
                 60,
                 120,
@@ -119,6 +118,11 @@ public class GuitarTest {
     public void canSetNumberOfStrings(){
         guitar.setNumberOfStrings(12);
         assertEquals(12, guitar.getNumberOfStrings());
+    }
+
+    @Test
+    public void canPlay(){
+        assertEquals("So anyway, here's Wonderwall", guitar.play());
     }
 
 
