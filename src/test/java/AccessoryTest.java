@@ -55,4 +55,8 @@ public class AccessoryTest {
         neckstrap.addUseTag(InstrumentType.WOODWIND);
         assertEquals(2, neckstrap.getUseTag().size(), 0.01);
     }
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(10, neckstrap.calculateMarkup(), 0.01);
+    }
 }

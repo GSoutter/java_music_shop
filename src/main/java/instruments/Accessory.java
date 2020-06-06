@@ -1,10 +1,11 @@
 package instruments;
 
+import behaviours.ISell;
 import enums_categories.InstrumentType;
 
 import java.util.ArrayList;
 
-public class Accessory {
+public class Accessory implements ISell {
 
     private String name;
     private double buyPrice;
@@ -24,6 +25,10 @@ public class Accessory {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public double calculateMarkup() {
+        return getSellPrice() - getBuyPrice();
     }
 
     public double getBuyPrice() {
