@@ -102,17 +102,17 @@ public class ShopTest {
         assertEquals(1, shop.getAccessories(horn).size());
         assertEquals(2, shop.getAccessories(guitar).size());
     }
-//    @Test
-//    public void canGetOtherInstrumentsOfSameType() {
-//        shop.addItem(horn);
-//        shop.addItem(horn);
-//        shop.addItem(piano);
-//        shop.addItem(piano);
-//        shop.addItem(piano);
-//        shop.addItem(guitar);
-//        shop.addItem(neckstrap);
-//        shop.addItem(stringReplacement);
-//        assertEquals(1, shop.getAccessories(horn).size());
-//        assertEquals(2, shop.getAccessories(guitar).size());
-//    }
+    @Test
+    public void canGetOtherInstrumentsOfSameType() {
+        shop.addItem(horn);
+        shop.addItem(horn);
+        shop.addItem(piano);
+        shop.addItem(piano);
+        shop.addItem(piano);
+        shop.addItem(guitar);
+        shop.addItem(neckstrap);
+        shop.addItem(stringReplacement);
+        assertEquals(2, shop.getOtherInstruments(horn).size());
+        assertEquals(3, shop.getOtherInstruments(piano).size());
+    }
 }

@@ -40,15 +40,28 @@ public class Shop {
 
         for(ISell item : this.stock){
             if (item instanceof Accessory){
-                for (InstrumentType type : ((Accessory) item).getUseTag()){
-                    if (type == instrument.getType()){
-                        accessories.add((Accessory) item);
-                        break;
-                    }
+                ArrayList<InstrumentType> tags = ((Accessory) item).getUseTag();
+                if (tags.contains(instrument.getType())){
+                    accessories.add((Accessory) item);
                 }
+//
             }
         }
         return accessories;
+
+    }
+
+    public ArrayList<Instrument> getOtherInstruments(Instrument instrument) {
+        ArrayList<Instrument> instruments = new ArrayList<Instrument>();
+
+        for(ISell item : this.stock){
+            if (item instanceof Instrument){
+                if (((Instrument) item).getType() == instrument.getType()){
+                    instruments.add((Instrument) item);
+                }
+            }
+        }
+        return instruments;
 
     }
 }
