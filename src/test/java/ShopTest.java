@@ -66,7 +66,30 @@ public class ShopTest {
     @Test
     public void canAddStock(){
         shop.addItem(horn);
-        assertEquals(1, shop.getStock().size());
+        shop.addItem(horn);
+        shop.addItem(piano);
+        shop.addItem(neckstrap);
+        assertEquals(4, shop.getStock().size());
+    }
+
+    @Test
+    public void canRemoveStock(){
+        shop.addItem(horn);
+        shop.addItem(horn);
+        shop.addItem(piano);
+        shop.addItem(neckstrap);
+        shop.removeStock(piano);
+        shop.removeStock(horn);
+        assertEquals(2, shop.getStock().size());
+    }
+
+    @Test
+    public void canGetTotalProfitValue(){
+        shop.addItem(horn);
+        shop.addItem(horn);
+        shop.addItem(piano);
+        shop.addItem(neckstrap);
+        assertEquals(5210, shop.totalStockProfitValue());
     }
 
 
