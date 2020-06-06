@@ -1,10 +1,11 @@
 package instruments;
 
 import behaviours.IPlay;
+import behaviours.ISell;
 import enums_categories.InstrumentType;
 import enums_categories.Material;
 
-public abstract class Instrument implements IPlay {
+public abstract class Instrument implements IPlay, ISell {
 
     private String name;
     private String brand;

@@ -125,6 +125,11 @@ public class GuitarTest {
         assertEquals("So anyway, here's Wonderwall", guitar.play());
     }
 
+    @Test
+    public void canCalculateMarkup(){
+        assertEquals(60, guitar.calculateMarkup(), 0.01);
+    }
+
 
 
 
