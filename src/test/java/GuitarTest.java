@@ -72,6 +72,56 @@ public class GuitarTest {
     }
 
 
+    @Test
+    public void canSetName(){
+        guitar.setName("les paul");
+        assertEquals("les paul", guitar.getName());
+    }
+
+    @Test
+    public void canSetBrand(){
+        guitar.setBrand("Epiphone");
+
+        assertEquals("Epiphone", guitar.getBrand());
+    }
+    @Test
+    public void canSetMaterial(){
+        guitar.setMaterial(Material.METAL);
+        assertEquals(Material.METAL, guitar.getMaterial());
+    }
+    @Test
+    public void canSetColour(){
+        guitar.setColour("sunburst red");
+        assertEquals("sunburst red", guitar.getColour());
+    }
+
+    @Test
+    public void canSetInstrumentType(){
+        guitar.setType(InstrumentType.KEYBOARD);
+        assertEquals(InstrumentType.KEYBOARD, guitar.getType());
+    }
+    @Test
+    public void canSetElectricType(){
+        guitar.setElectric(false);
+        assertEquals(false, guitar.isElectric());
+    }
+    @Test
+    public void canSetBuyPrice(){
+        guitar.setBuyPrice(70);
+        assertEquals(70, guitar.getBuyPrice(), 0.01);
+    }
+    @Test
+    public void canSetSellPrice(){
+        guitar.setSellPrice(130);
+        assertEquals(130, guitar.getSellPrice(), 0.01);
+    }
+    @Test
+    public void canSetNumberOfStrings(){
+        guitar.setNumberOfStrings(12);
+        assertEquals(12, guitar.getNumberOfStrings());
+    }
+
+
 
 
 }
