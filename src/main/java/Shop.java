@@ -1,5 +1,8 @@
 import behaviours.ISell;
+import enums_categories.InstrumentType;
+import instruments.Accessory;
 import instruments.Horn;
+import instruments.Instrument;
 
 import java.util.ArrayList;
 
@@ -30,5 +33,22 @@ public class Shop {
             total += item.calculateMarkup();
         }
         return total;
+    }
+
+    public ArrayList<Accessory> getAccessories(Instrument instrument) {
+        ArrayList<Accessory> accessories = new ArrayList<Accessory>();
+
+        for(ISell item : this.stock){
+            if (item instanceof Accessory){
+                for (InstrumentType type : ((Accessory) item).getUseTag()){
+                    if (type == instrument.getType()){
+                        accessories.add((Accessory) item);
+                        break;
+                    }
+                }
+            }
+        }
+        return accessories;
+
     }
 }
