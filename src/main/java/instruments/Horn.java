@@ -15,7 +15,7 @@ public class Horn extends Instrument{
                  double buyPrice,
                  double sellPrice,
                  int numberOfValves) {
-        super(name, brand, material, colour, InstrumentType.KEYBOARD, electric, buyPrice, sellPrice);
+        super(name, brand, material, colour, InstrumentType.WOODWIND, electric, buyPrice, sellPrice);
         this.numberOfValves = numberOfValves;
     }
 
